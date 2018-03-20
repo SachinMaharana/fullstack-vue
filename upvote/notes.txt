@@ -13,3 +13,4 @@ computed--> reactive
 data--> not reactive
 methods
 class bindings...some class based on conditions
+Vue.component --> isolated component

@@ -18,32 +18,12 @@
         </h2>
         <div class="section">
             <article class="media" :class="{'blue-border': submission.votes >= 20}" v-for="submission in sortedSubmissions" v-bind:key="submission.id">
-                <figure class="media-left">
-                    <img v-bind:src="submission.submissionImage" alt="" class="image is-64x64">
-                </figure>
-                <div class="media-content">
-                    <div class="content">
-                        <p>
-                            <strong>
-                                <a v-bind:href="submission.url" class="has-text-info"> {{submission.title}}</a>
-                                <span class="tag is-small">#{{submission.id}}</span>
-                            </strong>
-                            <br>{{submission.description}}
-                            <br>
-                            <small class="is-size-7">
-                                Submitted By:
-                                <img v-bind:src="submission.avatar" alt="" class="image is-24x24">
-                            </small>
-                        </p>
-                    </div>
-                </div>
-                <div class="media-right">
-                    <span class="icon is-small" @click="upvote(submission.id)">
-                        <i class="fa fa-chevron-up"></i>
-                        <strong class="has-text-info">{{submission.votes}}</strong>
-                    </span>
-                </div>
+                <submission-component v-bind:submission="submission" v-bind:submissions="sortedSubmissions"></submission-component>
             </article>
+
+
+
+
         </div>
     </div>
     <script src="https://unpkg.com/vue"></script>
