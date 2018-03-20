@@ -1,0 +1,15 @@
+index.html
+bulma
+fontwesome
+styles
+vue unpkg
+https://unpkg.com/vue
+When changes happen to our computed property, our
+view re-renders to display that change!
+v-bind
+v-for
+@click
+computed--> reactive
+data--> not reactive
+methods
+class bindings...some class based on conditions
